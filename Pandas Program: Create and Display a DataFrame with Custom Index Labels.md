@@ -1,24 +1,32 @@
-# Pandas Program: Create and Display a DataFrame with Custom Index Labels
+# NumPy Program: Replace the Second Column in a 2D Array
 
 ## 🎯 Aim
-
-To create and display a **DataFrame** using the **Pandas** library in Python from a given dictionary, and apply specific index labels to the rows.
-
----
+To write a **NumPy** program that deletes the second column from a given 2D array and inserts a new column at the same position.
 
 ## 🧠 Algorithm
+1. **Import NumPy**: Start by importing the NumPy library.
+2. **Get Input**: Get a 2D NumPy array and a new column (as another array) from the user.
+3. **Delete Column**: Use `np.delete()` to remove the second column (index 1) from the original array.
+4. **Insert Column**: Use `np.insert()` to insert the new column at the second column's original position.
+5. **Display Result**: Print the updated array with the replaced column.
 
-1. **Import Libraries**: Import the required libraries – `pandas` and `numpy`.
-2. **Create Dictionary**: Define a dictionary `exam_data` with keys: `'name'`, `'score'`, `'attempts'`, and `'qualify'`.
-3. **Index Labels**: Create a list of custom index labels called `labels`.
-4. **Create DataFrame**: Use `pd.DataFrame()` to create the DataFrame by passing the dictionary and index labels.
-5. **Display Output**: Display the DataFrame using `print()` or by simply calling the DataFrame variable.
-
----
-
-## 💻 Program
-Add code here
-
+## 🧾 Program
+```
+import numpy as np
+orig=np.array(eval(input()))
+new=np.array(eval(input()))
+print("Printing Original array")
+print(orig)
+modif=np.delete(orig,1,axis=1)
+print("Array after deleting column 2 on axis 1")
+print(modif)
+result=np.insert(modif,1,new,axis=1)
+print("Array after inserting column 2 on axis 1")
+print(result)
+```
 ## Output
+<img width="1136" height="362" alt="image" src="https://github.com/user-attachments/assets/6210e30a-b493-4d2d-b9f6-4054e22084bc" />
 
 ## Result
+Thus, the program has been executed successfully.
+
